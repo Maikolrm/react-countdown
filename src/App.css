@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@700&display=swap');
+
+:root {
+  --red: #f86086;
+  --transition: all .2s;
+  --circle: 15px
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: none;
+  position: relative;
+  box-sizing: border-box;
+  outline: none;
+  list-style: none;
+  text-decoration: none;
+}
+
+span, a { display: inline-block }
+
+img { display: block; width: 100% }
+
+/*
+  ROOT */
+#root {
+  height: 100vh;
+  min-height: 700px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background: url('./img/bg-stars.svg'), #231d2b;
+  overflow-x: hidden
+}
+
+/* PRINCIPAL HEADING */
+.root__heading {
+  padding-top: 10vw;
+  font: 20px 'Red Hat Text';
+  text-transform: uppercase;
+  color: #f6f6f6;
+  letter-spacing: 5px
+}
+
+/*
+  COUNTDOWN */
+.countdown { display: flex }
+
+/* COUNTDOWN EL */
+.countdown__el { margin-right: 2.5vw }
+.countdown__el:last-child { margin-right: 0 }
+
+/* COUNTDOWN - EL HEADING */
+.el__hading {
+  text-align: center;
+  padding-top: 2.5vw;
+  font: 700 1.5vw 'Red Hat Text';
+  text-transform: uppercase;
+  color: #8685a4;
+  letter-spacing: 3px
+}
+
+/* COUNTER */
+.countdown__counter {
+  margin: auto;
+  width: 14vw;
+  height: 14vw;
+  background: #34364f;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 1vw 0 3px #1a1a24;
+  line-height: 14vw;
+  overflow: hidden
+}
+
+.countdown__counter h3 { font: 700 6vw 'Red Hat Text'; line-height: inherit; color: var(--red) }
+
+/* COUNTER - HOVER */
+.counter__hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  height: 50%;
+  background: rgba(0, 0, 0, .1);
+  border-bottom: 1px solid #252a40
+}
+
+.hover__circle {
+  position: absolute;
+  top: 100%;
+  transform: translate(0, -50%);
+  z-index: 1000;
+  width: var(--circle);
+  height: var(--circle);
+  background: #181822;
+  border-radius: 50%
+}
+
+.hover__circle--left { left: 0; margin-left: calc(-1 * (var(--circle) / 2)) }
+.hover__circle--right { right: 0; margin-right: calc(-1 * (var(--circle) / 2)) }
+
+/*
+  HILLS */
+.hills { width: 100% }
+
+/* HILLS - SOCIAL MEDIA */
+.hills__social-media {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 100;
+  transform: translate(-50%, 0);
+}
+
+.social-media__link {
+  width: 30px;
+  margin-right: 3vw;
+  font-size: 20px;
+  text-align: center;
+  color: #8685a4;
+  line-height: 30px;
+  transition: var(--transition)
+}
+
+.social-media__link:last-child { margin-right: 0 }
+
+.hills__social-media i { line-height: inherit }
+
+.social-media__link:hover, .social-media__link:focus { color: var(--red) }
+
+/*
+  MEDIA */
+@media screen and (max-width: 1000px) {
+  /* COUNTDOWN - EL HEADING */
+  .el__hading { padding-top: 4vw; font-size: 2vw }
+}
+
+@media screen and (max-width: 900px) {
+  /* COUNTER */
+  .countdown__counter { width: 18vw; height: 18vw; line-height: 18vw }
+  /* COUNTER HEADING */
+  .countdown__counter h3 { line-height: inherit }
+}
+
+@media screen and (max-width: 700px) {
+  /* COUNTDOWN - COUNTER */
+  .countdown__counter { width: 21vw; height: 21vw; line-height: 21vw }
+  /* COUNTER - HEADING */
+  .countdown__counter h3 { font-size: 9vw }
+  /* HILLS */
+  .hills { width: 200% }
+}
+
+@media screen and (max-width: 500px) {
+  /* COUNTDOWN - EL HEADING */
+  .el__hading { font-size: 10px }
+}
