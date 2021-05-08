@@ -1,7 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@700&display=swap');
 
 :root {
-  --red: #f86086;
+  --desaturated-blue: hsl(236, 21%, 26%);
+  --grayish-blue: hsl(237, 18%, 59%);
+  --very-dark-blue: hsl(235, 16%, 14%);
+  --mostly-dark-blue: hsl(234, 17%, 12%);
+  --red: hsl(345, 95%, 68%);
   --transition: all .2s;
   --circle: 15px
 }
@@ -31,7 +35,7 @@ img { display: block; width: 100% }
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  background: url('./img/bg-stars.svg'), #231d2b;
+  background: url('./img/bg-stars.svg'), var(--very-dark-blue);
   overflow-x: hidden
 }
 
@@ -58,7 +62,7 @@ img { display: block; width: 100% }
   padding-top: 2.5vw;
   font: 700 1.5vw 'Red Hat Text';
   text-transform: uppercase;
-  color: #8685a4;
+  color: var(--grayish-blue);
   letter-spacing: 3px
 }
 
@@ -67,10 +71,10 @@ img { display: block; width: 100% }
   margin: auto;
   width: 14vw;
   height: 14vw;
-  background: #34364f;
+  background: var(--desaturated-blue);
   border-radius: 8px;
   text-align: center;
-  box-shadow: 0 1vw 0 3px #1a1a24;
+  box-shadow: 0 1vw 0 3px var(--mostly-dark-blue);
   line-height: 14vw;
   overflow: hidden
 }
@@ -96,7 +100,7 @@ img { display: block; width: 100% }
   z-index: 1000;
   width: var(--circle);
   height: var(--circle);
-  background: #181822;
+  background: var(--mostly-dark-blue);
   border-radius: 50%
 }
 
