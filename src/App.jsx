@@ -7,7 +7,7 @@ function App() {
   const [count, setCount] = useState({})
   useEffect(() => {
     const interval = setInterval(async () => {
-      const response = await handleCountDown('2021-08-05 24:00')
+      const response = await handleCountDown('2022-08-05 24:00')
       setCount(response)
     }, 1000)
     return () => clearTimeout(interval)
