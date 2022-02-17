@@ -1,4 +1,4 @@
-## React countdown
+## React Countdown App
 
 #### What this app can do?
 
