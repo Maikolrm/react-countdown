@@ -1,4 +1,4 @@
-## React landingpage
+## React countdown
 
 #### What this app can do?
 
